@@ -2,10 +2,18 @@
 Input: a List of integers
 Returns: a List of integers
 '''
+# DONE
 def product_of_all_other_numbers(arr):
-    # Your code here
+    final = []
+    total = 1
+    for i in range(0, len(arr)):
+        for j in range(0, len(arr)):
+            if i != j:
+                total *= arr[j]
+        final.append(total)
+        total = 1
+    return final
 
-    pass
 
 
 if __name__ == '__main__':

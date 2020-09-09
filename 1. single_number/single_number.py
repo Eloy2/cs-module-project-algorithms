@@ -2,11 +2,12 @@
 Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
+# DONE
 def single_number(arr):
-    # Your code here
-
-    pass
-
+    for i in arr:
+        if arr.count(i) == 1:
+            once = i
+    return once
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
