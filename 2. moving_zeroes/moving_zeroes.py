@@ -3,17 +3,24 @@ Input: a List of integers
 Returns: a List of integers
 '''
 # DONE
+# def moving_zeroes(arr):
+#     left = []
+#     right = []
+#     for i in arr:
+#         if i == 0:
+#             right.append(i)
+#         else:
+#             left.append(i)
+#     left.extend(right)
+#     return left
 def moving_zeroes(arr):
-    left = []
-    right = []
+    final = []
     for i in arr:
         if i == 0:
-            right.append(i)
+            final.append(i)
         else:
-            left.append(i)
-    left.extend(right)
-    return left
-
+            final.insert(0,i)
+    return final
 
 if __name__ == '__main__':
     # Use the main function here to test out your implementation
